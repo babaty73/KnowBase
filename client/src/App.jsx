@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Analytics } from "@vercel/analytics/react"
 
 const API_URL = import.meta.env.VITE_API_URL;
 
@@ -95,6 +96,7 @@ function App() {
   }, []);
 
   return (
+    <>
     <main className="min-h-screen bg-slate-950 text-slate-100">
       {/* Header */}
       <header className="border-b border-slate-800">
@@ -265,6 +267,8 @@ function App() {
         </section>
       </div>
     </main>
+    <Analytics />
+    </>
   );
 }
 
