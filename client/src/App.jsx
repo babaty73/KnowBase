@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 
-const DOCUMENT_API = "http://localhost:5000/api/documents";
-const QUESTION_API = "http://localhost:5000/api/questions";
+const API_URL = import.meta.env.VITE_API_URL;
+
+const DOCUMENT_API = `${API_URL}/api/documents`;
+const QUESTION_API = `${API_URL}/api/questions`;
 
 function App() {
   const [documents, setDocuments] = useState([]);
